@@ -1,10 +1,10 @@
-package com.rodeotech.rodeotechapi;
+package com.karansaklani20.multiwordle;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RodeotechApiApplicationTests {
+class MultiwordleApplicationTests {
 
 	@Test
 	void contextLoads() {
