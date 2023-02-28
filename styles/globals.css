@@ -1,9 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    color: white;
+    background: #413F42;
 }
 
 a {
@@ -21,6 +27,76 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #413F42;
   }
 }
+
+/* Standard syntax */
+@keyframes backgroundColorPalette {
+  0% {
+    background: none;
+  }
+  25% {
+    background: #538d4e;
+  }
+  50% {
+    background: none;
+  }
+  75% {
+    background: #b59f3b;
+  }
+  100% {
+    background: none;
+  }
+}
+
+.wordle {
+  animation-name: backgroundColorPalette;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.square{
+  padding-top: 100%;
+}
+
+.loader {
+  border: solid #f3f3f3; /* Light grey */
+  border-top: solid #3498db; /* Blue */
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes increaseWidthAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width:100%;
+  }
+}
+
+.animating-width {
+  animation-name: increaseWidthAnimation;
+  animation-duration: 75ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+}
+
+.wordle-correct{
+  background: #538d4e;
+  color: white;
+}
+
+.wordle-close{
+  background: #b59f3b;
+  color: white;
+}
+
